@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	    <title>Realizar agendamento</title>
+	    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	</head>
+	<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+   <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+      </ul>
+    </div>
+      
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="listar-agendamentos">Listar todos os agendamentos</a>
+      </ul>
+    </div>
+  </div>
+</nav>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<h3 align="center">Preencha todos os dados para o agendamento</h3>
+		<br>
+		<br>
+		<div align="center">
+			<form action="salvar" method="post">
+			
+			    <div class="form-group col-md-3">
+			        <label for="nome"><strong>Nome</strong></label>
+			        <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" />
+			    </div>
+			    <div class="form-group col-md-3">
+			        <label for="cpf"><strong>CPF</strong></label>
+			        <input type="text" class="form-control" id="cpf" name="cpf" placeholder="CPF" />
+			    </div>
+			    <div class="form-group col-md-3">
+			        <label for="telefone"><strong>Telefone</strong></label>
+			        <input type="text" class="form-control" id="telefone" name="telefone" placeholder="telefone" />
+			    </div>
+			    <div class="form-group col-md-3">
+			        <label for="endereco_origem"><strong>Endereço de origem</strong></label>
+			        <input type="text" class="form-control" id="endereco_origem" name="endereco_origem" placeholder="Endereço de origem" />
+			    </div>
+			    <div class="form-group col-md-3">
+			        <label for="endereco_destino"><strong>Endereço de destino</strong></label>
+			        <input type="text" class="form-control" id="endereco_destino" name="endereco_destino" placeholder="Endereço de destino" />
+			    </div>
+			    <div class="form-group col-md-3">
+			        <label for="local_destino"><strong>Nome do local de destino</strong></label>
+			        <input type="text" class="form-control" id="local_destino" name="local_destino" placeholder="Nome do local" />
+			    </div>
+			    <div class="form-group col-md-3">
+			        <label for="data_viagem"><strong>Data da viagem</strong></label>
+			        <input type="date" class="form-control" id="data_viagem" name="data_viagem" placeholder="Data" />
+			    </div>
+			    <div class="form-group col-md-3">
+			        <label for="acompanhante"><strong>Acompanhante</strong></label>
+			        <input type="text" class="form-control" id="acompanhante" name="acompanhante" placeholder="SIM ou NÂO" />
+			    </div>
+			    
+    			<div class="form-group col-md-3">
+    				<button type="submit" class="btn btn-success">Salvar</button>
+    			</div>
+			</form>
+		</div>
+	</body>
+</html>

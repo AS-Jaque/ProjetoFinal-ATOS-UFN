@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	    <title>Lista de Agendamentos</title>
+	    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	</head>
+	<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+   <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+      </ul>
+    </div>
+      
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="realizar-agendamento">Realizar cadastro</a>
+      </ul>
+    </div>
+  </div>
+</nav>
+	
+	<h3 align="center">AGENDAMENTOS</h3>
+	<br>
+		<div class="container">
+			<div id="listaDePessoas">
+	    		<table class="table table-hover">
+	        		<thead>
+	        			<tr>
+	        				<th>Código</th>
+				            <th>Nome</th>
+				            <th>CPF</th>
+				            <th>Telefone</th>
+				            <th>Endereço de origem</th>
+				            <th>Endereço de destino</th>
+				            <th>Local de destino</th>
+				            <th>Data da viagem</th>
+				            <th>Acompanhante</th>
+				            <th>Ações</th>
+				        </tr>
+	        		</thead>
+			        <tr th:each="agendamento : ${agendamentos}">
+			            <td> <span th:text="${agendamento.id}"></span> </td>
+			            <td> <span th:text="${agendamento.nome}"></span> </td>
+			            <td> <span th:text="${agendamento.cpf}"></span> </td>
+			            <td> <span th:text="${agendamento.telefone}"></span> </td>
+			            <td> <span th:text="${agendamento.endereco_origem}"></span> </td>
+			            <td> <span th:text="${agendamento.endereco_destino}"></span> </td>
+			            <td> <span th:text="${agendamento.local_destino}"></span> </td>
+			            <td> <span th:text="${agendamento.data_viagem}"></span> </td>
+			            <td> <span th:text="${agendamento.acompanhante}"></span> </td>
+			            <td> <form action="atualizar" method="post">
+                                <input type="hidden" id="idUpdate" name="idUpdate" th:value="${agendamento.id}">
+                                <button type="submit" class="btn btn-primary">Atualizar</button>
+                            </form></td>
+                        <td><form action="deletar" method="post">
+                                <input type="hidden" id="idDelete" name="idDelete" th:value="${agendamento.id}">
+                                <button type="submit" onclick="return confirm('Deseja realmente excluir?')" class="btn btn-danger">Deletar</button>
+                            </form> </td>
+			        </tr>  
+			    </table>
+			</div>
+		</div>
+		<form action="findAllData/{data_viagem}" method="post">
+            <div class="form-group col-md-3">
+                <label for="data-viagem">Filtrar agendamentos por data</label> <input type="date" class="form-control" id="data_viagem" name="data_viagem"/>
+            </div>
+            <div class="form-group col-md-3">
+				<button type="submit" class="btn btn-success">Pesquisar</button>
+			</div>
+		</form>
+	</body>
+</html>
