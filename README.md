@@ -23,21 +23,26 @@ O backend deve ser executado em um workspace diferente do frontend, com portas d
 Seguem as imagens da aplicação no frontend:
 
 <h3>Página de formulário</h3><br>
+
 ![formulario](https://user-images.githubusercontent.com/86419207/146094927-f7e10a77-d5b5-4333-9276-a4119ce76502.PNG)
 
 <h3>Página de listagem</h3><br>
+
 ![listaAgendametos](https://user-images.githubusercontent.com/86419207/146094943-3e00089c-9607-4e33-be90-6d3d161f188f.PNG)
 
 <h3>Página inicial</h3><br>
+
 ![paginaInicial](https://user-images.githubusercontent.com/86419207/146094960-d11c1615-d781-4735-8e47-5848c716c22f.PNG)
 
 
 Imagens da Rest API sendo testada no Postman:
 
 <h3>Método Get</h3><br>
+
 ![GetPostman](https://user-images.githubusercontent.com/86419207/146094997-83b012e4-6993-47b0-94ca-50c81e6a93b1.PNG)
 
 <h3>Método Delete</h3><br>
+
 ![DeletePostman](https://user-images.githubusercontent.com/86419207/146095009-3090c880-9122-4836-83d5-96e755cde677.PNG)
 
 <h3>Verificando se foi deletado</h3><br>
