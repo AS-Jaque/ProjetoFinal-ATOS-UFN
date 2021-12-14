@@ -14,10 +14,10 @@ O projeto é um CRUD de agendamentos. Esses agendamentos são de pessoas que pre
 -Bootstrap;<br>
 -Thymeleaf;<br>
 -Spring Web.
-<br>
+
 
 A pasta ProjetoFinal corresponde a Rest API que foi desenvolvida, e a pasta FrontEnd corresponde a parte de front-end que através de uma classe de Service está consumindo a Rest API.
-<br>
+
 O backend deve ser executado em um workspace diferente do frontend, com portas de conexão diferentes também, neste projeto a API está sendo executada na porta 8080, enquanto o frontend esta executando na porta 9000!
 <br>
 Seguem as imagens da aplicação no frontend:
